@@ -29,12 +29,13 @@ public class StudentView {
 		System.out.println("국어 : " + student.kor);
 		System.out.println("영어 : " + student.eng);
 		System.out.println("수학 : " + student.math);
+		}
 	
-//	public void viewMessage(String message) {
-//		//문자열 출력
-//		System.out.println("-----------------------------");
-//		System.out.println(message);
-//		System.out.println("-----------------------------");
+	public void viewMessage(String message) {
+		//문자열 출력
+		System.out.println("-----------------------------");
+		System.out.println(message);
+		System.out.println("-----------------------------");
 	
 	}
 	
