@@ -5,7 +5,12 @@ import java.util.Scanner;
 public class MethodMain {
 
 	public static void main(String[] args) {
+		//1. Main Method
+		//  1) 프로그램 Start
+		//  2) Test
+		
 		System.out.println("MainMethod Start");
+	
 		//Scanner sc = new Scanner(System.in);
 
 		System.out.println("Conflict Test");
