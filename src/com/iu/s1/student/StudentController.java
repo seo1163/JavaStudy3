@@ -9,6 +9,7 @@ public class StudentController {
 		boolean check = true;
 		StudentUtil studentUtil = new StudentUtil();
 		StudentView studentView = new StudentView();
+		studentUtil.initUtil();
 		Student [] students = null;
 		while(check) {
 			System.out.println("1. 학생들의 정보 입력");
@@ -32,6 +33,7 @@ public class StudentController {
 				if(students==null) {
 					studentView.viewMessage("학생정보가 없습니다");
 					continue;
+				
 				}
 				Student student = studentUtil.search(students);
 				if(student != null) {
