@@ -29,30 +29,40 @@ public class StudentController {
 				}
 				break;
 			case 3 : 
-				System.out.println("검색할 학생 번호를 입력해 주세요");
-				int num = sc.nextInt();
-				Student student = null;
-				for(int i=0; i<students.length;i++) {
-					if (num == students[i].number) {
-						System.out.println(students[i].name);
-						System.out.println(students[i].number + "번");
-						System.out.println("국어 : " + students[i].kor+"점");
-						System.out.println("영어 : " + students[i].eng + "점");
-						System.out.println("수학 : " + students[i].math + "점");
-						
+				if(students==null) {
+					studentView.viewMessage("학생정보가 없습니다");
+					continue;
+				}
+				Student student = studentUtil.search(students);
+				if(student != null) {
+					studentView.viewStudent(student);
+				}else {
+					studentView.viewMessage("검색 결과가 없습니다");
+				}
+//				System.out.println("검색할 학생 번호를 입력해 주세요");
+//				int num = sc.nextInt();
+//				Student student = null;
+//				for(int i=0; i<students.length;i++) {
+//					if (num == students[i].number) {
+//						System.out.println(students[i].name);
+//						System.out.println(students[i].number + "번");
+//						System.out.println("국어 : " + students[i].kor+"점");
+//						System.out.println("영어 : " + students[i].eng + "점");
+//						System.out.println("수학 : " + students[i].math + "점");
+//						
 						
 						break;
-					}
 					
 					
-				}
+					
+				
 			default :
 				//check = !check;
 				check=false;
 				break;
-			}
 			
-		//switch case
+			
+		}//switch case
 		}//while 끝
 	}//Main 끝
 	
