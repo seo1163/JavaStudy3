@@ -9,7 +9,7 @@ public class StudentController {
 		boolean check = true;
 		StudentUtil studentUtil = new StudentUtil();
 		StudentView studentView = new StudentView();
-		studentUtil.initUtil();
+		//studentUtil.initUtil();
 		Student [] students = null;
 		while(check) {
 			System.out.println("1. 학생들의 정보 입력");
