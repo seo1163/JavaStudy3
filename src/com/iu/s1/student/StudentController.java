@@ -26,20 +26,20 @@ public class StudentController {
 				if(students !=null) {
 				studentView.viewStudents(students);
 				}else {
-					studentView.viewMessage("학생정보를 먼저 입력해 주세요");
+					studentView.view("학생정보를 먼저 입력해 주세요");
 				}
 				break;
 			case 3 : 
 				if(students==null) {
-					studentView.viewMessage("학생정보가 없습니다");
+					studentView.view("학생정보가 없습니다");
 					continue;
 				
 				}
 				Student student = studentUtil.search(students);
 				if(student != null) {
-					studentView.viewStudent(student);
+					studentView.view(student);
 				}else {
-					studentView.viewMessage("검색 결과가 없습니다");
+					studentView.view("검색 결과가 없습니다");
 				}
 //				System.out.println("검색할 학생 번호를 입력해 주세요");
 //				int num = sc.nextInt();

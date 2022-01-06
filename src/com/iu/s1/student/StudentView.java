@@ -10,7 +10,7 @@ public class StudentView {
 	public void viewStudents(Student [] students) {
 		
 		for(int i=0; i<students.length; i++) {
-			this.viewStudent(students[i]);
+			this.view(students[i]);
 //			Student student = students[i];
 //			this.viewStudent(student);
 //			System.out.println("이름 : " + student.name);
@@ -28,7 +28,7 @@ public class StudentView {
 	
 	//viewStudent - 학생의 모든 정보를 출력
 	
-	public void viewStudent(Student student) {
+	public void view(Student student) {
 		System.out.println("이름 : " + student.name );
 		System.out.println("번호 : " + student.number);
 		System.out.println("국어 : " + student.kor);
@@ -38,7 +38,7 @@ public class StudentView {
 		System.out.println("평균 : " + student.avg);
 		}
 	
-	public void viewMessage(String message) {
+	public void view(String message) {
 		//문자열 출력
 		System.out.println("-----------------------------");
 		System.out.println(message);
